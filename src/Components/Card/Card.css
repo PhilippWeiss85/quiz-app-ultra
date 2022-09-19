@@ -12,14 +12,9 @@
 .quiz-card__bookmark {
   position: relative;
   left: 40%;
-  top: -0.7em;
+  top: -1rem;
   z-index: 10;
   transition: 0.2s ease;
-}
-
-.quiz-card__bookmark--solid {
-  cursor: pointer;
-  box-shadow: -4px -6px var(--third-color);
 }
 
 .quiz-card__bookmark:hover {

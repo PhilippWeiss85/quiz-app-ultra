@@ -6,15 +6,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 3px solid black;
+  border-top: 1px solid black;
   height: 80px;
   padding: 15px;
   z-index: 20;
-  border-spacing: revert;
 }
 
 .navbar__item {
-  padding: 25px 40px;
+  padding: 22px 40px;
 }
 
 .navbar__item:hover {
@@ -27,6 +26,6 @@
   border-radius: 10px;
 }
 
-.navbar img {
-  height: 1.5em;
+.navbar svg {
+  height: 2rem;
 }
