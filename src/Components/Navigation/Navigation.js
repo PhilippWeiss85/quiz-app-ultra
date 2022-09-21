@@ -1,22 +1,19 @@
 import "./Navigation.css";
-import { useState } from "react";
+// import { useState } from "react";
 
-export function Navigation() {
+export function Navigation({ page, setPage }) {
   // preventDefault muss hier rein sonst resettet sich das immer
-  const [activeNav, setActiveNav] = useState("");
+  // const [activeNav, setActiveNav] = useState("home");
   return (
     <nav className="navbar">
       <button
-        href="/index.html"
-        onClick={() => setActiveNav("home")}
-        className={
-          activeNav === "home" ? "navbar__item navbar__item--active" : "navbar__item"
-        }
+        onClick={() => setPage("home")}
+        className={page === "home" ? "navbar__item navbar__item--active" : "navbar__item"}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           alt="Home"
-          enable-background="new 0 0 24 24"
+          enableBackground="new 0 0 24 24"
           height="2rem"
           viewBox="0 0 24 24"
           width="2rem"
@@ -27,9 +24,9 @@ export function Navigation() {
       </button>
       <button
         href="/bookmarks.html"
-        onClick={() => setActiveNav("bookmark")}
+        onClick={() => setPage("bookmark")}
         className={
-          activeNav === "bookmark" ? "navbar__item navbar__item--active" : "navbar__item"
+          page === "bookmark" ? "navbar__item navbar__item--active" : "navbar__item"
         }
       >
         <svg
@@ -45,10 +42,8 @@ export function Navigation() {
       </button>
       <button
         href="/form.html"
-        onClick={() => setActiveNav("form")}
-        className={
-          activeNav === "form" ? "navbar__item navbar__item--active" : "navbar__item"
-        }
+        onClick={() => setPage("form")}
+        className={page === "form" ? "navbar__item navbar__item--active" : "navbar__item"}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,9 +58,9 @@ export function Navigation() {
       </button>
       <button
         href="/profile.html"
-        onClick={() => setActiveNav("profile")}
+        onClick={() => setPage("profile")}
         className={
-          activeNav === "profile" ? "navbar__item navbar__item--active" : "navbar__item"
+          page === "profile" ? "navbar__item navbar__item--active" : "navbar__item"
         }
       >
         <svg

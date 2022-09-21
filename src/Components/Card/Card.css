@@ -52,7 +52,7 @@
   max-width: fit-content;
 }
 
-button {
+.quiz-card__button {
   padding: 2% 5%;
   margin: 2% 5% 2% 5%;
   border: none;
@@ -61,12 +61,12 @@ button {
   transition: box-shadow 0.1s ease-out;
 }
 
-button:hover {
+.quiz-card__button:hover {
   background-color: lightblue;
   border: none;
 }
 
-button:active {
+.quiz-card__button:active {
   background-color: darkcyan;
   box-shadow: 0.3em 0.2em lightblue;
 }
