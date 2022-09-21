@@ -1,6 +1,9 @@
 import "./Card.css";
+import { useState } from "react";
 
-export function Card() {
+export function Card({ question, answer, tags }) {
+  const [showAnswer, setShowAnswer] = useState(false);
+
   return (
     <section className="quiz-card">
       <svg
@@ -14,17 +17,18 @@ export function Card() {
         <path d="M0 0h24v24H0z" fill="none" />
         <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
       </svg>
-      <h2>What property flips the axes in flexbox?</h2>
-      <button className="button__show-answer">Show answer</button>
-      <article className="article--hidden">
-        <p className="quiz-card__answer">
-          To flip the axes in a flexbox you need to you use the property 'flex-direction'.
-        </p>
-      </article>
+      <h2>{question}</h2>
+      {/* <button onClick={() => setShowAnswer((previousShowAnswer) => !previousShowAnswer)}> DAS IST DIE BESSERE VARIANTE */}
+      <button onClick={() => setShowAnswer(!showAnswer)}>
+        {showAnswer ? "Hide answer" : "Show answer"}
+      </button>
+      <p>{showAnswer ? <p className="quiz-card__answer">{answer}</p> : ""}</p>
       <ul className="quiz-card__list">
-        <li className="quiz-card__tag">#html</li>
-        <li className="quiz-card__tag">#flexbox</li>
-        <li className="quiz-card__tag">#css</li>
+        {tags.map((tag) => (
+          <li className="quiz-card__tag" key={tag}>
+            {tag}
+          </li>
+        ))}
       </ul>
     </section>
   );
