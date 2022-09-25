@@ -1,7 +1,6 @@
 import { Card } from "../Components/Card/Card";
 
-export function Cards({ cardArray }) {
-  console.log(cardArray);
+export function Cards({ cardArray, deleteCard, toggleBookmark }) {
   return (
     <div>
       {/* {cardArray.map((card) => (
@@ -14,8 +13,17 @@ export function Cards({ cardArray }) {
         />
       ))} */}
 
-      {cardArray.map(({ id, question, answer, tags }) => (
-        <Card key={id} question={question} answer={answer} tags={tags} />
+      {cardArray.map(({ id, question, answer, tags, bookmark }) => (
+        <Card
+          toggleBookmark={toggleBookmark}
+          deleteCard={deleteCard}
+          key={id}
+          id={id}
+          question={question}
+          answer={answer}
+          tags={tags}
+          bookmark={bookmark}
+        />
       ))}
     </div>
   );

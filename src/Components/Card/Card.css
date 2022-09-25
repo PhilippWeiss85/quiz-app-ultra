@@ -70,3 +70,22 @@
   background-color: darkcyan;
   box-shadow: 0.3em 0.2em lightblue;
 }
+
+.quiz-card__button__delete {
+  padding: 2% 5%;
+  margin: 1% 1% 1% 1%;
+  background-color: transparent;
+  transition: box-shadow 0.1s ease-out;
+  font-size: 0.8rem;
+  box-shadow: 0.3em 0.2em lightblue;
+}
+
+.quiz-card__button__delete:hover {
+  background-color: lightcoral;
+  border: none;
+}
+
+.quiz-card__button__delete:active {
+  background-color: lightcoral;
+  box-shadow: 0.3em 0.2em tomato;
+}
